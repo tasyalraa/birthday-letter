@@ -1,0 +1,450 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#efe4d1;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    color:#3e2f24;
+}
+
+section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+/* ========================= */
+/* COVER */
+/* ========================= */
+
+.envelope{
+    background:#e8d5b7;
+    padding:60px;
+    border-radius:12px;
+    text-align:center;
+    max-width:500px;
+    width:100%;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+    border:2px solid rgba(0,0,0,.08);
+}
+
+.stamp{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.envelope h1{
+    font-family:'Caveat',cursive;
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.envelope p{
+    margin-bottom:20px;
+}
+
+button{
+    border:none;
+    padding:14px 28px;
+    border-radius:8px;
+    cursor:pointer;
+    background:#9c6644;
+    color:white;
+    font-size:16px;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+/* ========================= */
+/* SURAT */
+/* ========================= */
+
+.paper{
+    position:relative;
+    background:#fffdf8;
+
+    max-width:850px;
+    width:100%;
+
+    padding:60px;
+
+    line-height:2;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+
+    border-radius:4px;
+
+    background-image:
+    repeating-linear-gradient(
+        transparent,
+        transparent 31px,
+        rgba(0,0,0,.04) 32px
+    );
+}
+
+/* efek kertas */
+
+.paper::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+    right:0;
+
+    height:12px;
+
+    background:
+    repeating-linear-gradient(
+        90deg,
+        #d4c2a8,
+        #d4c2a8 10px,
+        transparent 10px,
+        transparent 20px
+    );
+}
+
+.paper h2{
+    font-family:'Caveat',cursive;
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.paper p{
+    margin-bottom:15px;
+}
+
+/* ========================= */
+/* ALBUM */
+/* ========================= */
+
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.polaroid{
+    background:white;
+    padding:10px 10px 25px;
+    width:220px;
+
+    box-shadow:
+    0 10px 15px rgba(0,0,0,.15);
+
+    transition:.3s;
+}
+
+.polaroid:hover{
+    transform:scale(1.05);
+}
+
+.polaroid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.polaroid p{
+    text-align:center;
+    font-family:'Caveat';
+    font-size:26px;
+    margin-top:10px;
+}
+
+.rotate1{
+    transform:rotate(-5deg);
+}
+
+.rotate2{
+    transform:rotate(4deg);
+}
+
+.rotate3{
+    transform:rotate(-8deg);
+}
+
+.rotate4{
+    transform:rotate(6deg);
+}
+
+.title{
+    font-family:'Caveat';
+    font-size:60px;
+    margin-bottom:40px;
+    text-align:center;
+}
+
+/* ========================= */
+/* CAKE */
+/* ========================= */
+
+.cake-container{
+    text-align:center;
+}
+
+.cake{
+    position:relative;
+    width:280px;
+    height:260px;
+    margin:50px auto;
+}
+
+/* lilin */
+
+.candle{
+    width:16px;
+    height:70px;
+    background:
+    repeating-linear-gradient(
+        45deg,
+        #ffffff,
+        #ffffff 5px,
+        #ff8fab 5px,
+        #ff8fab 10px
+    );
+
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    top:10px;
+    border-radius:8px;
+}
+
+/* api */
+
+.flame{
+    width:24px;
+    height:35px;
+
+    background:
+    radial-gradient(
+        circle,
+        #ffd166,
+        #ff9f1c
+    );
+
+    position:absolute;
+
+    top:-28px;
+    left:-4px;
+
+    border-radius:
+    50% 50% 50% 50% /
+    60% 60% 40% 40%;
+
+    animation:flicker .5s infinite alternate;
+
+    cursor:pointer;
+}
+
+.flame.out{
+    opacity:0;
+    transform:translateY(-10px);
+    transition:.5s;
+}
+
+/* lapisan krim */
+
+.icing{
+    width:240px;
+    height:50px;
+
+    background:#fff;
+
+    position:absolute;
+
+    left:50%;
+    transform:translateX(-50%);
+
+    top:80px;
+
+    border-radius:20px;
+
+    z-index:2;
+}
+
+.icing::after{
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+    height:20px;
+
+    bottom:-10px;
+
+    background:
+    radial-gradient(
+        circle at 10px 0,
+        white 12px,
+        transparent 13px
+    );
+
+    background-size:30px 20px;
+}
+
+/* layer atas */
+
+.cake-top{
+    width:240px;
+    height:80px;
+
+    background:#ffcad4;
+
+    position:absolute;
+
+    left:50%;
+    transform:translateX(-50%);
+
+    top:110px;
+
+    border-radius:12px;
+
+    box-shadow:
+    inset 0 -8px rgba(255,255,255,.3);
+}
+
+/* layer bawah */
+
+.cake-bottom{
+    width:270px;
+    height:90px;
+
+    background:#f4a261;
+
+    position:absolute;
+
+    left:50%;
+    transform:translateX(-50%);
+
+    top:180px;
+
+    border-radius:12px;
+
+    box-shadow:
+    inset 0 -10px rgba(255,255,255,.25);
+}
+
+/* tulisan */
+
+.instruction{
+    font-size:20px;
+    margin-top:10px;
+}
+
+/* animasi api */
+
+@keyframes flicker{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.15);
+    }
+
+}
+
+.birthday-message{
+
+    opacity:0;
+
+    transform:scale(.7);
+
+    transition:.8s;
+
+    margin-top:40px;
+
+    text-align:center;
+
+}
+
+.birthday-message.show{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+.birthday-message h1{
+
+    font-size:60px;
+
+    margin-bottom:10px;
+
+    animation:bounce 1s infinite;
+}
+
+.birthday-message h2{
+
+    font-size:35px;
+
+    color:#d62828;
+}
+
+@keyframes bounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+/* ========================= */
+
+.final{
+    text-align:center;
+}
+
+.hidden{
+    display:none;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .paper{
+        padding:30px;
+    }
+
+    .paper h2{
+        font-size:38px;
+    }
+
+    .title{
+        font-size:45px;
+    }
+
+    .polaroid{
+        width:160px;
+    }
+
+    .polaroid img{
+        height:180px;
+    }
+
+    .envelope{
+        padding:35px;
+    }
+
+}

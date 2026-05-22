@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Habede Habedut Habedit Habedat</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ENVELOPE -->
+
+<section id="cover">
+
+    <div class="envelope">
+
+        <div class="stamp">✉️</div>
+
+        <h1>BUKA</h1>
+
+        <p>
+            Kalo ga dibuka,<br>
+            ya ga ngapa-ngapa sih.
+        </p>
+
+        <button id="openLetterBtn">
+            Buka Surat
+        </button>
+
+    </div>
+
+</section>
+
+<!-- PAGE 1 -->
+
+<section class="page hidden" id="page1">
+
+<div class="paper">
+
+<h2>Haiii</h2>
+
+<p>
+Hari ini adalah hari spesial karena seseorang yang luar biasa sedang bertambah usia.
+</p>
+
+<p>
+Aku cuma mau bilang terima kasih karena sudah hadir dalam banyak cerita, tawa, dan momen yang nggak akan pernah aku lupain.
+</p>
+
+<button onclick="nextPage(2)">
+Lanjut →
+</button>
+
+</div>
+
+</section>
+
+<!-- PAGE 2 -->
+
+<section class="page hidden" id="page2">
+
+<h2 class="title">
+Jujur gatau ini mau diisi apa, yodah poto kite aje :D
+</h2>
+
+<div class="gallery">
+
+<div class="polaroid rotate1">
+<img src="images/foto1.jpg">
+<p>Pucat bat tuh kata gua</p>
+</div>
+
+<div class="polaroid rotate2">
+<img src="images/foto2.jpg">
+<p>Otpit nyeblaknya dijual ya kak?</p>
+</div>
+
+<div class="polaroid rotate3">
+<img src="images/foto3.jpg">
+<p>Moment PUSING, PUSANG, PISANG, APALAH ITU</p>
+</div>
+
+<div class="polaroid rotate4">
+<img src="images/foto4.jpg">
+<p>🤨</p>
+</div>
+
+<div class="polaroid rotate5">
+<img src="images/foto5.jpeg">
+<p>Terdampar</p>
+</div>
+
+</div>
+
+<button onclick="showCake()">
+Lanjut →
+</button>
+
+</section>
+
+<section class="page hidden" id="cakePage">
+
+    <div class="cake-container">
+
+        <h2>Make a Wish ✨</h2>
+
+        <p class="instruction">
+            Tiup lilinnya ges
+        </p>
+
+        <div class="cake">
+
+            <div class="candle">
+                <div class="flame" id="flame"></div>
+            </div>
+
+            <div class="icing"></div>
+
+            <div class="cake-top"></div>
+
+            <div class="cake-bottom"></div>
+
+        </div>
+
+        <button
+            id="nextAfterCake"
+            onclick="nextPage(3)"
+            style="display:none;"
+        >
+            Lanjut →
+        </button>
+
+        <div id="birthdayMessage" class="birthday-message">
+
+            <h1>🎉 YEAYYY 🎉</h1>
+
+            <h2>SELAMAT ULANG TAHUN!</h2>
+
+            <p>
+                Wish u all the best cici, semua doa mu ku aamiinkan, semoga selalu sehat, bahagia, dan sukses terus yaak.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</section>
+
+<!-- PAGE 3 -->
+
+<section class="page hidden" id="page3">
+
+<div class="paper">
+
+<h2>Beberapa Hal Tentang Cicilelawar 🌷</h2>
+
+<ul>
+<li>Maniac kopi (udah ditahap expert kataku mah)</li>
+<li>Pendengar yang baik, saking baiknya bisa sampe ga tega tuh sama cerita orang lain.</li>
+<li>Orang yang kuat dan selalu berusaha untuk menjadi yang terbaik.</li>
+<li>Apalagi yeah, banyak sih cici mah</li>
+</ul>
+
+<button onclick="nextPage(4)">
+Lanjut →
+</button>
+
+</div>
+
+</section>
+
+<!-- PAGE 4 -->
+
+<section class="page hidden" id="page4">
+
+<div class="paper final">
+
+<h1>🎂 Happy Birthday 🎂</h1>
+
+<p>
+Semoga semua hal baik datang kepadamu tahun ini ya Cici, semoga semua usaha dan kerja kerasmu membuahkan hasil yang manis, dan semoga setiap langkahmu dipenuhi dengan kebahagiaan dan kesuksesan.
+</p>
+
+<p>
+Semoga semua mimpi yang sedang km perjuangkan bisa tercapai satu per satu dan semoga km selalu dikelilingi oleh orang-orang yang mencintai dan mendukung.
+</p>
+
+<p>
+Terima kasih sudah menjadi bagian dari cerita yang sangat berarti dihidupku yah, maaf kalo aku beberapa kali ngecewain km, dan makasih udah maafin dan masih mau berteman dengan ku, hidup yang lebih lama ya ci.
+</p>
+
+<h2>
+Selamat Ulang Tahun ✨
+</h2>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
